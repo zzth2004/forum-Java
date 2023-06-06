@@ -28,7 +28,7 @@ public class JDBCConnection {
 		return conn;
 		
 	}
-	public boolean userRegister (user e) throws SQLException {
+	public static boolean userRegister (user e) throws SQLException {
 		String sql = "INSERT INTO qlyforumjava.ta_acc_useraccount (I_ACC_id, T_ACC_username, T_ACC_pass,T_ACC_email, T_ACC_phone, T_ACC_name, D_ACC_birthday) "
                 + "VALUES(?,?,?,?,?,?,?)";
 		PreparedStatement ps = conn.prepareStatement(sql);
